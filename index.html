@@ -7,44 +7,58 @@
     <link href="http://cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">Project name</a>
-        </div>
-        <div id="navbar" class="collapse navbar-collapse">
-          <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </div><!--/.nav-collapse -->
-      </div>
-    </nav>
-
-    <div class="container">
-
-      <div class="starter-template">
-        <h1>欢迎</h1>
-        <p class="lead">
-        我的项目地址 <a href="https://github.com/wayshall/onetwo">onetwo</a>
-</p>
-      </div>
-
-    </div><!-- /.container -->
-
-
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="http://cdn.bootcss.com/jquery/1.11.2/jquery.min.js"></script>
-    <script src="http://cdn.bootcss.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-  </body>
+  <h1 id="zifish">zifish</h1>
+  <hr>
+  <p>基于spring boot的快速开发框架   </p>
+  <p>联系邮箱：  wayshall@qq.com</p>
+  <h2 id="-">环境要求和主要框架依赖版本</h2>
+  <ul>
+  <li>JDK 8+</li>
+  <li>Spring 4.x+</li>
+  <li>Spring Boot 2.7.18 (boot模块要求）</li>
+  <li>Spring Cloud 2021.0.9 (cloud模块要求)</li>
+  </ul>
+  <h2 id="maven">maven</h2>
+  <p>当前snapshot版本：<strong>5.2.7-SNAPSHOT</strong>   </p>
+  <p>若使用snapshot版本，请添加snapshotRepository仓储：   </p>
+  <pre><code class="lang-xml"><span class="hljs-tag">&lt;<span class="hljs-name">repository</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">id</span>&gt;</span>oss<span class="hljs-tag">&lt;/<span class="hljs-name">id</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">url</span>&gt;</span>https://oss.sonatype.org/content/repositories/snapshots/<span class="hljs-tag">&lt;/<span class="hljs-name">url</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">snapshots</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">enabled</span>&gt;</span>true<span class="hljs-tag">&lt;/<span class="hljs-name">enabled</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">snapshots</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">repository</span>&gt;</span>
+  </code></pre>
+  <h2 id="-">示例项目</h2>
+  <p>基于zifish的web示例项目：
+  <a href="https://github.com/wayshall/onetwo-web-sample">web-sample</a><br>基于zifish的后台管理示例项目：
+  <a href="https://github.com/wayshall/onetwo-web-manager">web-manager</a>   </p>
+  <h2 id="-common-https-github-com-wayshall-onetwo-tree-master-core-modules-common-"><a href="https://github.com/wayshall/onetwo/tree/master/core/modules/common">common模块</a></h2>
+  <p>通用模块，一些工具类封装。</p>
+  <h2 id="-spring-https-github-com-wayshall-onetwo-tree-master-core-modules-spring-"><a href="https://github.com/wayshall/onetwo/tree/master/core/modules/spring">spring模块</a></h2>
+  <p>依赖到spring相关的封装</p>
+  <h2 id="-tomcat-https-github-com-wayshall-onetwo-tree-master-core-modules-tomcat-"><a href="https://github.com/wayshall/onetwo/tree/master/core/modules/tomcat">内嵌tomcat模块</a></h2>
+  <p>简单的内嵌tomcat容器实现</p>
+  <h2 id="-poi-https-github-com-wayshall-onetwo-tree-master-core-modules-poi-"><a href="https://github.com/wayshall/onetwo/tree/master/core/modules/poi">poi模块</a></h2>
+  <p>基于poi，对操作excel的简单封装。</p>
+  <h2 id="-dbm-https-github-com-wayshall-dbm-"><a href="https://github.com/wayshall/dbm">dbm模块</a></h2>
+  <p>基于spring jdbc实现的简单orm   </p>
+  <p>单独使用dbm的示例项目：
+  <a href="https://github.com/wayshall/boot-dbm-sample">boot-dbm-sample</a></p>
+  <h2 id="-security-https-github-com-wayshall-onetwo-tree-master-core-modules-security-"><a href="https://github.com/wayshall/onetwo/tree/master/core/modules/security">security模块</a></h2>
+  <p>基于spring security实现的动态 RBAC 权限管理  </p>
+  <h2 id="-boot-https-github-com-wayshall-onetwo-tree-master-core-modules-boot-"><a href="https://github.com/wayshall/onetwo/tree/master/core/modules/boot">boot模块</a></h2>
+  <p>boot模块：</p>
+  <ul>
+  <li>基于boot之上封装插件机制</li>
+  <li>freemarker增加插件路径分派支持</li>
+  <li>封装第三方库使用</li>
+  </ul>
+  <h2 id="-zifish-plugins-https-github-com-wayshall-zifish-plugins-"><a href="https://github.com/wayshall/zifish-plugins">zifish-plugins插件项目</a></h2>
+  <p>包含了基于本框架开发的插件。</p>
+  <ul>
+  <li>web-admin插件：使用jquery-easyui编写的简单后台管理，包含了基本的权限管理和菜单功能。</li>
+  <li>swaggerext插件</li>
+  </ul>
+</body>
 </html>
